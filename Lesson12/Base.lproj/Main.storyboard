@@ -47,27 +47,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-a6-cgw">
-                                <rect key="frame" x="170" y="460" width="78" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Bright"/>
-                                <connections>
-                                    <action selector="chooseAndDismiss:" destination="aM4-U0-oFz" eventType="touchUpInside" id="jp5-HV-9zG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enT-fP-J7L">
-                                <rect key="frame" x="177" y="270" width="61" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Dark"/>
-                                <connections>
-                                    <action selector="chooseAndDismiss:" destination="aM4-U0-oFz" eventType="touchUpInside" id="JTj-wb-xMC"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="Mko-nX-jWi">
+                                <rect key="frame" x="177" y="270" width="78" height="238"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enT-fP-J7L">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Dark"/>
+                                        <connections>
+                                            <action selector="chooseAndDismiss:" destination="aM4-U0-oFz" eventType="touchUpInside" id="JTj-wb-xMC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-a6-cgw">
+                                        <rect key="frame" x="0.0" y="190" width="78" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Bright"/>
+                                        <connections>
+                                            <action selector="chooseAndDismiss:" destination="aM4-U0-oFz" eventType="touchUpInside" id="jp5-HV-9zG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="enT-fP-J7L" firstAttribute="centerX" secondItem="2OX-St-yxt" secondAttribute="centerX" id="FO8-9q-dBl"/>
-                            <constraint firstItem="ui2-a6-cgw" firstAttribute="centerX" secondItem="2OX-St-yxt" secondAttribute="centerX" id="GsP-PV-YuV"/>
+                            <constraint firstItem="Mko-nX-jWi" firstAttribute="centerY" secondItem="2OX-St-yxt" secondAttribute="centerY" id="Wjf-PQ-2xL"/>
+                            <constraint firstItem="Mko-nX-jWi" firstAttribute="centerX" secondItem="2OX-St-yxt" secondAttribute="centerX" id="dPF-td-fuU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2OX-St-yxt"/>
                     </view>
